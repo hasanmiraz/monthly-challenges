@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #06283D;
+    font-family: 'Roboto';
+    color: #DFF6FF;
+}
+
+a {
+    color: #DFF6FF;
+    text-decoration: none;
+}
+/* 
+a:hover {
+    color: #47B5FF;
+    transition: .3s;
+} */

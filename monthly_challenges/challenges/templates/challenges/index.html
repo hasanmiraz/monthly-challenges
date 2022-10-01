@@ -1,0 +1,24 @@
+{%extends "global.html"%}
+{% load static %}
+
+{%block css_link%}
+    <link rel="stylesheet" href="{% static "challenges/challenges.css" %}">
+{%endblock%}
+
+{%block title%}
+    Monthly Challenges
+{%endblock%}
+{%block content%}
+    <h1><a href="{%url "challenges_index"%}">Monthly Challenges</a></h1>
+    <ul>
+        {%for iteam in name_of_months%}
+            <a href = "{%url "string_month" iteam%}">
+                <li>
+                    <h2>
+                        {{iteam|title}} <!iteam is a veriable and title is there for capitalization>
+                    </h2>
+                </li>
+            </a> 
+        {%endfor%}
+    </ul>
+{%endblock%}

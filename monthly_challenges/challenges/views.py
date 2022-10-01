@@ -20,7 +20,10 @@ monthly_challenges_dict = {
 month_list = list(monthly_challenges_dict.keys())
 
 def index(request):
-    return HttpResponse(month_list)
+    response_data = {
+        "name_of_months" : month_list
+    }
+    return render(request, "challenges/index.html", response_data)
 
 def monthly_challenge_int(request, month):
     if month > 0 and month <=12:
